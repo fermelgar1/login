@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Admin from './components/Admin';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
+import Reset from './components/Reset';
 import { auth } from './firebase';
 
 function App() {
@@ -31,7 +32,16 @@ function App() {
           <Route path='/admin'>
             <Admin user = { firebaseUser }/>
           </Route>
-          <Route path='/'>
+          <Route path='/reset'>
+            <>
+              <div className="row justify-content-center">
+                <div className="col-12 col-sm-8 col-md-6 col-xl-4">
+                  <Reset/>
+                </div>
+              </div>
+            </>
+          </Route>
+          <Route path='/' exact>
             inicio
           </Route>
         </Switch>

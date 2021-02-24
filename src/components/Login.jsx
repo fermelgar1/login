@@ -123,6 +123,15 @@ const Login = (props) => {
                         className="btn btn-info btn-sm w-100 mt-2">
                              { esRegistro ? `¿Ya tienes una cuenta?` : `Crea una cuenta` }
                         </button>
+                        { !esRegistro && 
+                            <button 
+                            onClick={ ()=> props.history.push('/reset')}
+                            type='button' 
+                            className="btn btn-danger btn-sm w-100 mt-2">
+                                olvide mi contraseña
+                            </button>
+                            }
+                    
                     </form>
                 </div>
             </div>
